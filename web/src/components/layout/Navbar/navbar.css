@@ -1,0 +1,56 @@
+.navbar {
+  width: 100%;
+  padding: 18px 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 80px;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #a855f7;
+}
+
+/* CTA Button */
+.talk-btn {
+  background: #ffffff;
+  color: #000;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.talk-btn:hover {
+  background: #e5e5e5;
+}

@@ -1,8 +1,19 @@
+import React from "react";
+import Navbar from "./components/layout/Navbar/Navbar";
+  import Hero from "./sections/Hero/Hero";
+// import Services from "./sections/Services";
+// import Work from "./sections/Work";
+// import Testimonials from "./sections/Testimonials";
+
 function App() {
   return (
-    <div className="App">
-     <h1>Welcome to Vexa</h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      {/* <Services />
+      <Work />
+      <Testimonials /> */}
+    </>
   );
 }
 

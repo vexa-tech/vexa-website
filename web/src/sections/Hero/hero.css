@@ -1,0 +1,94 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  background-image: linear-gradient(
+      rgba(15, 0, 31, 0.7),
+      rgba(15, 0, 31, 0.7)
+    ),
+    url('../../assets/images/background.avif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 clamp(1.25rem, 8vw, 8%);
+}
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  z-index: 2;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 56rem;
+}
+
+.hero-left h1 {
+  font-size: clamp(2.25rem, 6vw, 4.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: white;
+  text-wrap: balance;
+}
+
+.highlight {
+  color: #2f80ed;
+}
+
+/* RIGHT */
+.hero-right {
+  width: min(100%, 25rem);
+  color: #cfcfcf;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  position: relative;
+}
+
+.hero-right p {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Glow Effects */
+.bg-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 1;
+}
+
+.glow-1 {
+  background: #4b00ff;
+  top: -100px;
+  left: -100px;
+}
+
+.glow-2 {
+  background: #007bff;
+  bottom: -150px;
+  right: -150px;
+}
+
+@media (max-width: 64em) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-right {
+    margin-top: 1rem;
+  }
+
+}
