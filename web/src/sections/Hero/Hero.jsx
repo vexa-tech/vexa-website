@@ -1,31 +1,42 @@
 import React from "react";
 import "./hero.css";
+import HeroNav from "./components/HeroNav";
+import GrowthCards from "./components/GrowthCards";
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="hero-container">
-        
-        {/* LEFT CONTENT */}
-        <div className="hero-left">
-          <h1>
-            We bring solutions to make life for our <span className="highlight">Customers.</span>
-          </h1>
-        </div>
+    <section className="hero" id="home">
+      <div className="hero-shell">
+        <HeroNav />
 
-        {/* RIGHT CONTENT */}
-        <div className="hero-right">
-          <p>
-            We have considered our solutions to support every stage 
-            of your growth.
-          </p>
-        </div>
+        <div className="hero-container">
+          <div className="hero-left">
+            <h1>
+              We bring solutions
+              <br />
+              to make life for our
+              <br />
+              <span className="highlight">Customers.</span>
+            </h1>
 
+            <a className="hero-touch-btn" href="#contact">
+              ↗ Get in Touch
+            </a>
+          </div>
+
+          <div className="hero-right">
+            <p>
+              We have considered our solutions
+              <br />
+              to support every stage of your
+              <br />
+              growth.
+            </p>
+
+            <GrowthCards />
+          </div>
+        </div>
       </div>
-
-      {/* Background Glow Effects */}
-      <div className="bg-glow glow-1"></div>
-      <div className="bg-glow glow-2"></div>
     </section>
   );
 };
