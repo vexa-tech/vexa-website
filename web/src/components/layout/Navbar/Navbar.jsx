@@ -1,33 +1,33 @@
 import React from "react";
-import "./navbar.css";
 import logo from "../../../assets/images/logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        
-        {/* Logo */}
-        <div className="navbar-logo">
-          <img src={logo} alt="Logo" />
-        </div>
+    <header className="hero-nav">
+      <a className="hero-nav-logo" href="#home" aria-label="Vexa home">
+        <img src={logo} alt="Vexa logo" />
+      </a>
 
-        {/* Links */}
-        <ul className="navbar-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
+      <ul className="hero-nav-links">
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#work">Work</a>
+        </li>
+        <li>
+          <a href="#testimonials">Testimonials</a>
+        </li>
+      </ul>
 
-        {/* CTA Button */}
-        <div className="navbar-cta">
-          <a href="#contact" className="talk-btn">
-            Let's Talk
-          </a>
-        </div>
+      <span className="hero-nav-separator" aria-hidden="true">
+        ---
+      </span>
 
-      </div>
-    </nav>
+      <a className="hero-nav-talk" href="#contact">
+        Lets Talk
+      </a>
+    </header>
   );
 };
 

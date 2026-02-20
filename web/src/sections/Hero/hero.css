@@ -94,6 +94,7 @@
   align-self: start;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 32rem;
 }
 
@@ -103,6 +104,7 @@
   font-weight: 600;
   line-height: 1.02;
   color: white;
+  align-self: center;
 }
 
 .highlight {
@@ -130,6 +132,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 32rem;
 }
 
@@ -137,6 +140,7 @@
   margin-top: 0;
   margin-bottom: clamp(1.2rem, 3vw, 2.4rem);
   line-height: 1.45;
+  align-self: center;
 }
 
 .hero-growth {
@@ -248,12 +252,14 @@
     justify-self: stretch;
     width: 100%;
     min-height: auto;
+    justify-content: flex-start;
   }
 
   .hero-left {
     text-align: center;
     min-height: auto;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .hero-touch-btn {

@@ -1,13 +1,13 @@
 import React from "react";
 import "./hero.css";
-import HeroNav from "./components/HeroNav";
+import Navbar from "../../components/layout/Navbar/Navbar";
 import GrowthCards from "./components/GrowthCards";
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-shell">
-        <HeroNav />
+        <Navbar />
 
         <div className="hero-container">
           <div className="hero-left">
