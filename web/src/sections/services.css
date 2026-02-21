@@ -1,0 +1,136 @@
+.services {
+  background: #160022;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 3vw, 2rem) clamp(2.8rem, 6vw, 5rem);
+}
+
+.services-inner {
+  max-width: 78rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: clamp(1rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.services h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.02;
+  color: #f2eefb;
+  font-weight: 500;
+}
+
+.services p {
+  margin: 0;
+  max-width: 34rem;
+  justify-self: end;
+  color: #f0ecfb;
+  font-size: clamp(1rem, 1.6vw, 1.45rem);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.services-grid {
+  max-width: 78rem;
+  margin: clamp(2rem, 4.2vw, 3rem) auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 3.6vw, 3.2rem) clamp(1.4rem, 3vw, 2.5rem);
+}
+
+.service-card {
+  min-height: 13rem;
+}
+
+.service-icon {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.2;
+  color: #08a2f3;
+  font-weight: 600;
+}
+
+.service-card p {
+  margin: 0.75rem 0 0;
+  color: #f2ecff;
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  line-height: 1.4;
+  max-width: 19rem;
+}
+
+.icon-mobile {
+  width: 3.7rem;
+  aspect-ratio: 1;
+  background: linear-gradient(155deg, #c17bff 15%, #7f40d7 80%);
+  border-radius: 30% 42% 35% 40%;
+  transform: rotate(18deg);
+}
+
+.icon-software {
+  width: 3.8rem;
+  height: 2.4rem;
+  background: linear-gradient(145deg, #d088ff 10%, #7e3ce2 80%);
+  border-radius: 60% 28% 52% 46%;
+  transform: rotate(32deg);
+}
+
+.icon-testing {
+  width: 3.7rem;
+  aspect-ratio: 1;
+  background: linear-gradient(145deg, #70b7ff 10%, #627eff 80%);
+  border-radius: 26% 34% 30% 42%;
+  transform: rotate(16deg);
+}
+
+.icon-maintenance {
+  width: 3.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #6cc4ff, #5a6eff 78%);
+}
+
+.icon-support {
+  width: 3.9rem;
+  height: 2.5rem;
+  border: 0.6rem solid #2c86ff;
+  border-radius: 50%;
+  transform: rotate(-18deg);
+  box-sizing: border-box;
+}
+
+.icon-consultation {
+  width: 3.7rem;
+  height: 2.7rem;
+  border: 0.48rem solid #94a7d8;
+  border-left-color: #2f7bff;
+  border-bottom-color: #2f7bff;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+  box-sizing: border-box;
+}
+
+@media (max-width: 48em) {
+  .services-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .services p {
+    justify-self: start;
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 36em) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
