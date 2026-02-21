@@ -1,6 +1,6 @@
 .hero {
   min-height: 100svh;
-  padding: 0.5rem;
+  padding: 0;
   background-image: linear-gradient(
       rgba(15, 0, 31, 0.7),
       rgba(15, 0, 31, 0.7)
@@ -9,13 +9,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .hero-shell {
   position: relative;
-  min-height: calc(100svh - 1rem);
+  min-height: 100svh;
   padding: clamp(1rem, 2.4vw, 2rem);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-shell::before {
@@ -34,6 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: clamp(3.5rem, 7vw, 5.5rem);
   gap: clamp(0.75rem, 1.5vw, 1.5rem);
 }
 
@@ -44,7 +46,7 @@
 }
 
 .hero-nav-logo img {
-  width: clamp(3rem, 5vw, 4.25rem);
+  width: clamp(3.75rem, 6.5vw, 7.5rem);
   height: auto;
 }
 
@@ -94,26 +96,27 @@
   z-index: 2;
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  align-items: stretch;
   gap: clamp(1.5rem, 3.5vw, 4rem);
-  padding-top: clamp(2rem, 6vh, 5rem);
+  padding-top: clamp(1rem, 2vh, 2rem);
   min-height: calc(100svh - 10rem);
 }
 
 .hero-left {
-  align-self: start;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 32rem;
+  min-height: 100%;
 }
 
 .hero-left h1 {
-  margin: 0;
+  margin: clamp(1.5rem, 4vh, 3rem) 0 0 clamp(0.5rem, 1.5vw, 1rem);
   font-size: clamp(2.4rem, 7vw, 5.6rem);
   font-weight: 600;
   line-height: 1.02;
   color: white;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .highlight {
@@ -134,7 +137,7 @@
 }
 
 .hero-right {
-  width: min(100%, 30rem);
+  width: min(100%, clamp(24rem, 36vw, 30rem));
   justify-self: end;
   color: #cfcfcf;
   font-size: clamp(1.15rem, 2vw, 2rem);
@@ -142,11 +145,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 32rem;
+  min-height: min(clamp(24rem, 42vw, 32rem), 100%);
 }
 
 .hero-right p {
-  margin-top: 0;
+  margin-top: clamp(1.5rem, 4vh, 3rem);
   margin-bottom: clamp(1.2rem, 3vw, 2.4rem);
   line-height: 1.45;
   align-self: center;
@@ -179,8 +182,8 @@
 
 .hero-growth-badge {
   position: absolute;
-  right: 6.6rem;
-  top: 3.4rem;
+  right: clamp(4.8rem, 9vw, 6.6rem);
+  top: clamp(2.8rem, 4.8vw, 3.4rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,6 +251,14 @@
 }
 
 @media (max-width: 64em) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-shell {
+    min-height: 100svh;
+  }
+
   .hero-nav-separator {
     display: none;
   }
@@ -255,6 +266,7 @@
   .hero-container {
     grid-template-columns: 1fr;
     padding-top: 2rem;
+    min-height: auto;
   }
 
   .hero-right {
@@ -283,11 +295,19 @@
   }
 
   .hero-growth-badge {
-    right: 5.6rem;
+    right: clamp(4.2rem, 13vw, 5.6rem);
   }
 }
 
 @media (max-width: 48em) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-shell {
+    min-height: 100svh;
+  }
+
   .hero-shell {
     padding: 1rem;
   }
@@ -312,7 +332,7 @@
   }
 
   .hero-growth-badge {
-    right: 4.6rem;
-    top: 3.1rem;
+    right: clamp(3.5rem, 14vw, 4.6rem);
+    top: clamp(2.7rem, 8vw, 3.1rem);
   }
 }
