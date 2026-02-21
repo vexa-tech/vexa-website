@@ -2,6 +2,30 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Docker
+
+### Build and run with Docker Compose
+
+From the `vexa-website` directory:
+
+```bash
+docker compose up --build
+```
+
+Then open [http://localhost:3000](http://localhost:3000).
+
+### Stop containers
+
+```bash
+docker compose down
+```
+
+### Rebuild image only
+
+```bash
+docker compose build vexa-web
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
