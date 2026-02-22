@@ -1,5 +1,6 @@
 import React from "react";
 import "./trust.css";
+import { siteContent } from "../config/siteContent";
 
 const Trust = () => {
   return (
@@ -12,22 +13,16 @@ const Trust = () => {
           </div>
 
           <div className="trust-content">
-            <h2>We make your spending stress-free for you to have the perfect control.</h2>
-            <p>
-              ASD Technologies Inc specializes in tailored custom software development,
-              delivering responsive applications, unique 3D modeling, graphic designs,
-              efficient document workflows, and impactful e-commerce platforms.
-              Our full-stack team ensures seamless integration into your existing
-              business processes.
-            </p>
+            <h2>{siteContent.trust.heading}</h2>
+            <p>{siteContent.trust.body}</p>
 
             <div className="trust-badges">
-              <span>94% Customer Satisfaction</span>
-              <span>4K+ New Projects</span>
-              <span>10K+ New Customers</span>
+              {siteContent.trust.badges.map((badge) => (
+                <span key={badge}>{badge}</span>
+              ))}
             </div>
 
-            <button className="trust-cta" type="button">Learn More</button>
+            <button className="trust-cta" type="button">{siteContent.trust.ctaLabel}</button>
           </div>
         </div>
       </div>

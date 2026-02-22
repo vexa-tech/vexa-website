@@ -1,5 +1,6 @@
 import React from "react";
 import "./contact.css";
+import { siteContent } from "../config/siteContent";
 
 const Contact = () => {
   return (
@@ -7,14 +8,16 @@ const Contact = () => {
       <div className="contact-inner">
         <div className="contact-top">
           <h2>
-            Lets Discuss
+            {siteContent.contact.headingLines[0]}
             <br />
-            Your Project
+            {siteContent.contact.headingLines[1]}
           </h2>
 
           <div className="contact-conversation">
-            <p>Or Start Conversation</p>
-            <a href="mailto:info@asdtechnologies.online">info@asdtechnologies.online</a>
+            <p>{siteContent.contact.conversation.label}</p>
+            <a href={`mailto:${siteContent.contact.conversation.email}`}>
+              {siteContent.contact.conversation.email}
+            </a>
           </div>
         </div>
 
@@ -22,32 +25,38 @@ const Contact = () => {
 
         <div className="contact-content">
           <div className="contact-copy">
-            <p>*Lorem Ipsum Dolor Sit Amet, Consectetur</p>
-            <p>Adipisicing Elit. Maecenas Ac Ligula Diam. Etiam</p>
-            <p>Commodo Aliquet Sapien At Tristique. Donec Ligula</p>
-            <p>Lectus, Aliquam Eget</p>
+            {siteContent.contact.copyLines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
             <span className="contact-shape" aria-hidden="true" />
           </div>
 
           <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
             <div className="contact-form-grid">
-              <input type="text" placeholder="First Name*" aria-label="First Name" />
-              <input type="text" placeholder="Last Name*" aria-label="Last Name" />
-              <input type="email" placeholder="Email*" aria-label="Email" />
-              <input type="tel" placeholder="Phone*" aria-label="Phone" />
-              <input type="text" placeholder="Subject*" aria-label="Subject" />
-              <input type="text" placeholder="Category*" aria-label="Category" />
+              {siteContent.contact.form.fields.map((field) => (
+                <input
+                  key={field.name}
+                  name={field.name}
+                  type={field.type}
+                  placeholder={field.placeholder}
+                  aria-label={field.label}
+                />
+              ))}
             </div>
 
-            <textarea placeholder="Type Message Here*" aria-label="Message" rows={5} />
+            <textarea
+              placeholder={siteContent.contact.form.messagePlaceholder}
+              aria-label={siteContent.contact.form.messageLabel}
+              rows={5}
+            />
 
             <div className="contact-actions">
               <label className="terms-label">
                 <input type="checkbox" />
-                <span>I accept the terms & Conditions</span>
+                <span>{siteContent.contact.form.termsText}</span>
               </label>
 
-              <button type="submit">Submit</button>
+              <button type="submit">{siteContent.contact.form.submitLabel}</button>
             </div>
           </form>
         </div>

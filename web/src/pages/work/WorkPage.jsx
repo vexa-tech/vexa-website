@@ -2,42 +2,7 @@ import React from "react";
 import Navbar from "../../components/layout/Navbar/Navbar";
 import Footer from "../../sections/Footer";
 import "./work-page.css";
-
-const workItems = [
-  {
-    title: "Fintech Mobile Suite",
-    summary: "Cross-platform banking app with biometric login and real-time insights.",
-  },
-  {
-    title: "Logistics Control Hub",
-    summary: "Operations dashboard that cut delivery exceptions by 32%.",
-  },
-  {
-    title: "Healthcare Portal",
-    summary: "Patient onboarding and secure messaging built for compliance.",
-  },
-  {
-    title: "Commerce Revamp",
-    summary: "Headless storefront optimized for speed and conversion growth.",
-  },
-  {
-    title: "AI Support Desk",
-    summary: "Self-serve workflows and insights that deflected 45% of tickets.",
-  },
-  {
-    title: "Creative Studio Platform",
-    summary: "End-to-end asset workflow with approvals and version tracking.",
-  },
-];
-
-const partners = [
-  "Orbit Labs",
-  "BluePeak Health",
-  "Nova Logistics",
-  "Brightline Retail",
-  "Atlas Finance",
-  "CloudNine Media",
-];
+import { siteContent } from "../../config/siteContent";
 
 const getInitials = (name) =>
   name
@@ -54,40 +19,37 @@ const WorkPage = () => {
         <div className="work-hero-shell">
           <Navbar />
           <div className="work-hero-content">
-            <h1>Our Work</h1>
-            <p>
-              Real products, measurable results. Explore a selection of engagements across
-              mobile, web, and enterprise platforms.
-            </p>
+            <h1>{siteContent.work.hero.title}</h1>
+            <p>{siteContent.work.hero.subtitle}</p>
           </div>
         </div>
       </section>
 
       <section className="work-grid" id="work">
         <div className="work-grid-inner">
-          {workItems.map((item) => (
+          {siteContent.work.items.map((item) => (
             <article key={item.title}>
-              <div className="work-chip">Case Study</div>
+              <div className="work-chip">{siteContent.work.cardLabel}</div>
               <h2>{item.title}</h2>
               <p>{item.summary}</p>
-              <button type="button">View Details</button>
+              <button type="button">{siteContent.work.cardCtaLabel}</button>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="work-partners" aria-label="Our partners">
+      <section className="work-partners" aria-label={siteContent.work.partners.sectionLabel}>
         <div className="work-partners-inner">
           <div className="work-partners-header">
-            <h2>Our Partners</h2>
-            <p>
-              Trusted by teams who value craftsmanship, velocity, and long-term product impact.
-            </p>
+            <h2>{siteContent.work.partners.title}</h2>
+            <p>{siteContent.work.partners.subtitle}</p>
           </div>
 
-          <div className="work-partners-marquee" aria-label="Partner logos">
+          <div className="work-partners-marquee" aria-label={siteContent.work.partners.logosLabel}>
             <div className="work-partners-track">
-              {partners.concat(partners).map((partner, index) => (
+              {siteContent.work.partners.names
+                .concat(siteContent.work.partners.names)
+                .map((partner, index) => (
                 <div className="partner-card" role="img" aria-label={partner} key={`${partner}-${index}`}>
                   <span className="partner-logo" aria-hidden="true">{getInitials(partner)}</span>
                 </div>
