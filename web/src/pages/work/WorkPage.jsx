@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../../components/layout/Navbar/Navbar";
 import Footer from "../../sections/Footer";
 import "./work-page.css";
@@ -40,6 +40,18 @@ const partners = [
 ];
 
 const WorkPage = () => {
+  const partnersRef = useRef(null);
+
+  const handleScroll = (direction) => {
+    const container = partnersRef.current;
+    if (!container) {
+      return;
+    }
+
+    const scrollAmount = container.offsetWidth * 0.85;
+    container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+  };
+
   return (
     <div className="work-page">
       <section className="work-hero">
@@ -75,9 +87,17 @@ const WorkPage = () => {
             <p>
               Trusted by teams who value craftsmanship, velocity, and long-term product impact.
             </p>
+            <div className="work-partners-controls">
+              <button type="button" onClick={() => handleScroll(-1)} aria-label="Scroll left">
+                ←
+              </button>
+              <button type="button" onClick={() => handleScroll(1)} aria-label="Scroll right">
+                →
+              </button>
+            </div>
           </div>
 
-          <div className="work-partners-grid">
+          <div className="work-partners-grid" ref={partnersRef}>
             {partners.map((partner) => (
               <div className="partner-card" key={partner}>
                 <span>{partner}</span>
