@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Navbar from "../../components/layout/Navbar/Navbar";
 import Footer from "../../sections/Footer";
 import "./work-page.css";
@@ -39,19 +39,15 @@ const partners = [
   "CloudNine Media",
 ];
 
+const getInitials = (name) =>
+  name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("");
+
 const WorkPage = () => {
-  const partnersRef = useRef(null);
-
-  const handleScroll = (direction) => {
-    const container = partnersRef.current;
-    if (!container) {
-      return;
-    }
-
-    const scrollAmount = container.offsetWidth * 0.85;
-    container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
-  };
-
   return (
     <div className="work-page">
       <section className="work-hero">
@@ -87,22 +83,16 @@ const WorkPage = () => {
             <p>
               Trusted by teams who value craftsmanship, velocity, and long-term product impact.
             </p>
-            <div className="work-partners-controls">
-              <button type="button" onClick={() => handleScroll(-1)} aria-label="Scroll left">
-                ←
-              </button>
-              <button type="button" onClick={() => handleScroll(1)} aria-label="Scroll right">
-                →
-              </button>
-            </div>
           </div>
 
-          <div className="work-partners-grid" ref={partnersRef}>
-            {partners.map((partner) => (
-              <div className="partner-card" key={partner}>
-                <span>{partner}</span>
-              </div>
-            ))}
+          <div className="work-partners-marquee" aria-label="Partner logos">
+            <div className="work-partners-track">
+              {partners.concat(partners).map((partner, index) => (
+                <div className="partner-card" role="img" aria-label={partner} key={`${partner}-${index}`}>
+                  <span className="partner-logo" aria-hidden="true">{getInitials(partner)}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
