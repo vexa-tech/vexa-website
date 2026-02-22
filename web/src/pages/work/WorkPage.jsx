@@ -30,6 +30,15 @@ const workItems = [
   },
 ];
 
+const partners = [
+  "Orbit Labs",
+  "BluePeak Health",
+  "Nova Logistics",
+  "Brightline Retail",
+  "Atlas Finance",
+  "CloudNine Media",
+];
+
 const WorkPage = () => {
   return (
     <div className="work-page">
@@ -56,6 +65,25 @@ const WorkPage = () => {
               <button type="button">View Details</button>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="work-partners" aria-label="Our partners">
+        <div className="work-partners-inner">
+          <div className="work-partners-header">
+            <h2>Our Partners</h2>
+            <p>
+              Trusted by teams who value craftsmanship, velocity, and long-term product impact.
+            </p>
+          </div>
+
+          <div className="work-partners-grid">
+            {partners.map((partner) => (
+              <div className="partner-card" key={partner}>
+                <span>{partner}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
