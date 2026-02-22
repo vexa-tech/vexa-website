@@ -1,21 +1,16 @@
 import React from "react";
-import Hero from "./sections/Hero/Hero";
-import Services from "./sections/Services";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
-// import Work from "./sections/Work";
-// import Testimonials from "./sections/Testimonials";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import WorkPage from "./pages/work/WorkPage";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <Services />
-      <Contact />
-      <Footer />
-      {/* <Work />
-      <Testimonials /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/work" element={<WorkPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -10,13 +10,13 @@ const Navbar = () => {
 
       <ul className="hero-nav-links">
         <li>
-          <a href="#services">Services</a>
+          <a href="/#services">Services</a>
         </li>
         <li>
-          <a href="#work">Work</a>
+          <a href="/work">Work</a>
         </li>
         <li>
-          <a href="#testimonials">Testimonials</a>
+          <a href="/#testimonials">Testimonials</a>
         </li>
       </ul>
 
@@ -24,7 +24,7 @@ const Navbar = () => {
         ---
       </span>
 
-      <a className="hero-nav-talk" href="#contact">
+      <a className="hero-nav-talk" href="/#contact">
         Lets Talk
       </a>
     </header>

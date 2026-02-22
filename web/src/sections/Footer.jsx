@@ -32,7 +32,7 @@ const Footer = () => {
           <ul>
             <li><a href="#">TERMS & CONDITIONS</a></li>
             <li><a href="#">PRIVACY POLICY</a></li>
-            <li><a href="#services">SERVICES</a></li>
+            <li><a href="/#services">SERVICES</a></li>
           </ul>
 
           <ul>
@@ -41,9 +41,9 @@ const Footer = () => {
           </ul>
 
           <ul>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#work">WORK</a></li>
-            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li><a href="/#services">SERVICES</a></li>
+            <li><a href="/work">WORK</a></li>
+            <li><a href="/#testimonials">TESTIMONIALS</a></li>
           </ul>
 
           <form className="site-footer-newsletter" onSubmit={(event) => event.preventDefault()}>
@@ -55,7 +55,7 @@ const Footer = () => {
           </form>
         </div>
 
-        <a className="site-footer-top" href="#home" aria-label="Back to top">↑</a>
+        <a className="site-footer-top" href="/#home" aria-label="Back to top">↑</a>
       </div>
     </footer>
   );
