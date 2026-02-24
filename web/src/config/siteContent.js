@@ -1,8 +1,8 @@
 export const siteContent = {
   nav: {
     homeHref: "/#home",
-    homeLabel: "Vexa home",
-    logoAlt: "Vexa logo",
+    homeLabel: "Vexa Tech home",
+    logoAlt: "Vexa Tech logo",
     links: [
       { label: "Services", href: "/#services" },
       { label: "Work", href: "/work" },
@@ -67,28 +67,28 @@ export const siteContent = {
         role: "Business Analyst",
         rating: "5.0",
         quote:
-          "I definitely recommend ASD Technologies. I felt they connected with our project and were the best experience in this platform so far. I intend to keep working with them and recommend their services.",
+          "I definitely recommend Vexa Tech. I felt they connected with our project and were the best experience in this platform so far. I intend to keep working with them and recommend their services.",
       },
       {
         name: "Cory Zamora",
         role: "Founder & CEO",
         rating: "5.0",
         quote:
-          "Consulting with ASD was an absolute pleasure. We had a diverse idea for a web project related to the automotive industry. The team was delighted to collaborate and advise us on the project ASAP.",
+          "Consulting with Vexa Tech was an absolute pleasure. We had a diverse idea for a web project related to the automotive industry. The team was delighted to collaborate and advise us on the project ASAP.",
       },
       {
         name: "Nikolas Brooten",
         role: "CEO & Co-Founder",
         rating: "5.0",
         quote:
-          "ASD exceeded all of my expectations. Extremely professional, knowledgeable, and great people to work with.",
+          "Vexa Tech exceeded all of my expectations. Extremely professional, knowledgeable, and great people to work with.",
       },
       {
         name: "Georgia Bloom",
         role: "Founder",
         rating: "5.0",
         quote:
-          "It was a pleasure working with the ASD team. They are very knowledgeable, patient, and very kind. I am a web developer myself and they helped speed up development for me.",
+          "It was a pleasure working with the Vexa Tech team. They are very knowledgeable, patient, and very kind. I am a web developer myself and they helped speed up development for me.",
       },
       {
         name: "Jackie Sanders",
