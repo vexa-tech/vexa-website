@@ -32,8 +32,6 @@ const Hero = () => {
               <br />
               growth.
             </p>
-
-            <GrowthCards />
           </div>
         </div>
       </div>
