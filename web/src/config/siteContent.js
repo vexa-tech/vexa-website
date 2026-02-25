@@ -61,6 +61,7 @@ export const siteContent = {
     accent: "*",
     subcopy: "Don't take our word for it. See what customers are saying about us.",
     ratingSymbol: "★",
+    sheetUrl: "https://opensheet.elk.sh/YOUR_SHEET_ID/Sheet1",
     items: [
       {
         name: "Corlis Ambady",
