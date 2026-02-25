@@ -20,20 +20,30 @@ const Testimonials = () => {
         }
 
         const mappedItems = data
-          .map((row) => ({
-            name: row.Name || row.name || "",
-            role: row.Role || row.role || "",
-            rating: row.Rating || row.rating || "",
-            quote: row.Quote || row.quote || "",
-          }))
-          .filter((row) => row.name && row.quote);
+          .map((row) => {
+            const approvalRaw = row.Approval ?? row.approval ?? "";
+            const approvalValue = String(approvalRaw).trim().toLowerCase();
+            const isApproved =
+              approvalValue !== "" &&
+              approvalValue !== "0" &&
+              approvalValue !== "false" &&
+              approvalValue !== "no";
+
+            return {
+              name: row.Name || row.name || "",
+              role: row.Role || row.role || "",
+              rating: row.Rating || row.rating || "",
+              quote: row.Quote || row.quote || "",
+              isApproved,
+            };
+          })
+          .filter((row) => row.name && row.quote && row.isApproved);
 
         if (mappedItems.length) {
           setItems(mappedItems);
         }
       })
       .catch(() => {
-        // Keep fallback items on fetch failure.
       });
 
     return () => {
