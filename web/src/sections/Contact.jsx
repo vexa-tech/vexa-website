@@ -1,60 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import "./contact.css";
 import { siteContent } from "../config/siteContent";
 
-const FORMSPREE_ENDPOINT = process.env.REACT_APP_FORMSPREE_ENDPOINT || "";
+const FORMSPREE_FORM_KEY = (process.env.REACT_APP_FORMSPREE_ENDPOINT || "").trim();
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitState, setSubmitState] = useState("idle");
-  const [submitMessage, setSubmitMessage] = useState("");
+  const [state, handleSubmit] = useForm(FORMSPREE_FORM_KEY);
+  const isFormConfigured = Boolean(FORMSPREE_FORM_KEY);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    if (isSubmitting) {
+  const onSubmit = (event) => {
+    if (!isFormConfigured) {
+      event.preventDefault();
       return;
     }
 
-    if (!FORMSPREE_ENDPOINT) {
-      setSubmitState("error");
-      setSubmitMessage("Form is not configured yet. Please add the Formspree endpoint.");
-      return;
-    }
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    setIsSubmitting(true);
-    setSubmitState("idle");
-    setSubmitMessage("");
-
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: formData,
-      });
-
-      if (response.ok) {
-        form.reset();
-        setSubmitState("success");
-        setSubmitMessage("Thanks! Your message was sent successfully.");
-        return;
-      }
-
-      const responseBody = await response.json().catch(() => null);
-      const formspreeError = responseBody?.errors?.[0]?.message;
-      setSubmitState("error");
-      setSubmitMessage(formspreeError || "Something went wrong while sending your message.");
-    } catch (error) {
-      setSubmitState("error");
-      setSubmitMessage("Network error. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    handleSubmit(event);
   };
 
   return (
@@ -85,7 +46,7 @@ const Contact = () => {
             <span className="contact-shape" aria-hidden="true" />
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" onSubmit={onSubmit}>
             <div className="contact-form-grid">
               {siteContent.contact.form.fields.map((field) => (
                 <input
@@ -99,6 +60,8 @@ const Contact = () => {
               ))}
             </div>
 
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+
             <textarea
               name="message"
               placeholder={siteContent.contact.form.messagePlaceholder}
@@ -107,20 +70,34 @@ const Contact = () => {
               required
             />
 
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+
             <div className="contact-actions">
               <label className="terms-label">
                 <input type="checkbox" name="termsAccepted" value="yes" required />
                 <span>{siteContent.contact.form.termsText}</span>
               </label>
 
-              <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : siteContent.contact.form.submitLabel}
+              <button type="submit" disabled={!isFormConfigured || state.submitting}>
+                {state.submitting ? "Sending..." : siteContent.contact.form.submitLabel}
               </button>
             </div>
 
-            {submitState !== "idle" && submitMessage ? (
-              <p role={submitState === "error" ? "alert" : "status"} aria-live="polite">
-                {submitMessage}
+            {!isFormConfigured ? (
+              <p role="alert" aria-live="polite">
+                Form is not configured yet. Please add the Formspree endpoint.
+              </p>
+            ) : null}
+
+            {state.succeeded ? (
+              <p role="status" aria-live="polite">
+                Thanks! Your message was sent successfully.
+              </p>
+            ) : null}
+
+            {state.errors?.length ? (
+              <p role="alert" aria-live="polite">
+                Something went wrong while sending your message.
               </p>
             ) : null}
           </form>
