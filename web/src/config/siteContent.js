@@ -1,8 +1,8 @@
 export const siteContent = {
   nav: {
     homeHref: "/#home",
-    homeLabel: "Vexa Tech home",
-    logoAlt: "Vexa Tech logo",
+    homeLabel: "vexa tech home",
+    logoAlt: "vexa tech logo",
     links: [
       { label: "Services", href: "/#services" },
       { label: "Work", href: "/work" },
@@ -14,7 +14,7 @@ export const siteContent = {
   services: {
     headingLines: ["What We", "Do"],
     intro:
-      "With over a decade of experience, we're committed to delivering top-notch software solutions tailored to your business needs.",
+      "With over 3+ years of experience, we're committed to delivering top-notch software solutions tailored to your business needs.",
     ariaLabel: "Service offerings",
     items: [
       {
@@ -52,7 +52,7 @@ export const siteContent = {
   trust: {
     heading: "We make your spending stress-free for you to have the perfect control.",
     body:
-      "ASD Technologies Inc specializes in tailored custom software development, delivering responsive applications, unique 3D modeling, graphic designs, efficient document workflows, and impactful e-commerce platforms. Our full-stack team ensures seamless integration into your existing business processes.",
+      "vexa tech specializes in tailored custom software development, delivering responsive applications, unique 3D modeling, graphic designs, efficient document workflows, and impactful e-commerce platforms. Our full-stack team ensures seamless integration into your existing business processes.",
     badges: ["94% Customer Satisfaction", "4K+ New Projects", "10K+ New Customers"],
     ctaLabel: "Learn More",
   },
@@ -68,13 +68,13 @@ export const siteContent = {
     headingLines: ["Lets Discuss", "Your Project"],
     conversation: {
       label: "Or Start Conversation",
-      email: "info@asdtechnologies.online",
+      email: "vexatech.it@gmail.com",
     },
     copyLines: [
-      "*Lorem Ipsum Dolor Sit Amet, Consectetur",
-      "Adipisicing Elit. Maecenas Ac Ligula Diam. Etiam",
-      "Commodo Aliquet Sapien At Tristique. Donec Ligula",
-      "Lectus, Aliquam Eget",
+      "Have an idea or need a website for your business?",
+      "Tell us about your project and get a free quotation.",
+      "We design web and mobile solutions tailored to your budget.",
+      "Message us today and let's build something great together.",
     ],
     form: {
       fields: [
@@ -92,8 +92,8 @@ export const siteContent = {
     },
   },
   footer: {
-    brandName: "ASDTECHNOLOGIES",
-    logoAlt: "ASD Technologies logo",
+    brandName: "VEXA TECH",
+    logoAlt: "vexa tech logo",
     tagsAriaLabel: "Service tags",
     tags: [
       "#CUSTOM APP DEVELOPMENT",
