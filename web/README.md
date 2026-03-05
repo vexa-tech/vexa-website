@@ -14,6 +14,16 @@ docker compose up --build
 
 Then open [http://localhost:3000](http://localhost:3000).
 
+## Contact Form (Formspree)
+
+The contact form submits to Formspree using this environment variable:
+
+```bash
+REACT_APP_FORMSPREE_ENDPOINT=https://formspree.io/f/your_form_id
+```
+
+Add it to your local `.env`, then restart the dev server.
+
 ### Stop containers
 
 ```bash
