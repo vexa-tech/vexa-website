@@ -144,6 +144,33 @@
   cursor: pointer;
 }
 
+.contact-terms {
+  margin-top: 0.85rem;
+  padding: 0.8rem 0.9rem;
+  border: 0.0625rem solid rgba(8, 162, 243, 0.35);
+  border-radius: 0.45rem;
+  background: rgba(19, 0, 31, 0.55);
+}
+
+.contact-terms-title {
+  margin: 0 0 0.4rem;
+  color: #f2eefb;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.contact-terms ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #d8d0ee;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.contact-terms li+li {
+  margin-top: 0.3rem;
+}
+
 @media (max-width: 60em) {
   .contact-content {
     grid-template-columns: 1fr;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "./contact.css";
 import { siteContent } from "../config/siteContent";
@@ -6,8 +6,15 @@ import { siteContent } from "../config/siteContent";
 const FORMSPREE_FORM_KEY = (process.env.REACT_APP_FORMSPREE_ENDPOINT || "").trim();
 
 const Contact = () => {
+  const formRef = useRef(null);
   const [state, handleSubmit] = useForm(FORMSPREE_FORM_KEY);
   const isFormConfigured = Boolean(FORMSPREE_FORM_KEY);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      formRef.current?.reset();
+    }
+  }, [state.succeeded]);
 
   const onSubmit = (event) => {
     if (!isFormConfigured) {
@@ -46,7 +53,7 @@ const Contact = () => {
             <span className="contact-shape" aria-hidden="true" />
           </div>
 
-          <form className="contact-form" onSubmit={onSubmit}>
+          <form ref={formRef} className="contact-form" onSubmit={onSubmit}>
             <div className="contact-form-grid">
               {siteContent.contact.form.fields.map((field) => (
                 <input
@@ -81,6 +88,15 @@ const Contact = () => {
               <button type="submit" disabled={!isFormConfigured || state.submitting}>
                 {state.submitting ? "Sending..." : siteContent.contact.form.submitLabel}
               </button>
+            </div>
+
+            <div className="contact-terms" id="contact-terms">
+              <p className="contact-terms-title">{siteContent.contact.form.termsTitle}</p>
+              <ul>
+                {siteContent.contact.form.termsItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
 
             {!isFormConfigured ? (
