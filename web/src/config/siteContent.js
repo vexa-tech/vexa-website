@@ -106,7 +106,7 @@ export const siteContent = {
     columns: [
       [
         { label: "LINKEDIN", href: "#" },
-        { label: "FACEBOOK", href: "#" },
+        { label: "FACEBOOK", href: "https://www.facebook.com/search/top?q=vexa%20tech" },
         { label: "INSTAGRAM", href: "#" },
       ],
       [
@@ -116,7 +116,7 @@ export const siteContent = {
       ],
       [
         { label: "LOCATION", href: "#" },
-        { label: "+1 (000) 000-0000", href: "tel:+10000000000" },
+        { label: "+94 710 313031", href: "tel:+94710313031" },
       ],
       [
         { label: "SERVICES", href: "/#services" },
