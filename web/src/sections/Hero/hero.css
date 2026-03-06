@@ -1,14 +1,7 @@
 .hero {
   min-height: 100svh;
   padding: 0;
-  background-image: linear-gradient(
-      rgba(15, 0, 31, 0.7),
-      rgba(15, 0, 31, 0.7)
-    ),
-    url("../../assets/images/background.avif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #200559;
   overflow-x: hidden;
 }
 
@@ -171,11 +164,9 @@
   border-radius: 3.8rem;
   padding: 1.35rem 0.85rem 1.7rem;
   color: rgba(255, 255, 255, 0.86);
-  background: linear-gradient(
-    180deg,
-    var(--growth-start, rgba(216, 104, 255, 0.36)),
-    var(--growth-end, rgba(216, 104, 255, 0.75))
-  );
+  background: linear-gradient(180deg,
+      var(--growth-start, rgba(216, 104, 255, 0.36)),
+      var(--growth-end, rgba(216, 104, 255, 0.75)));
 }
 
 .growth-card span {

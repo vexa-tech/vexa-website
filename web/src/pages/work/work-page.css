@@ -1,15 +1,11 @@
 .work-page {
-  background: #160022;
+  background: #200559;
   color: #ffffff;
 }
 
 .work-hero {
   min-height: 70svh;
-  background-image: linear-gradient(rgba(15, 0, 31, 0.75), rgba(15, 0, 31, 0.75)),
-    url("../../assets/images/background.avif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #200559;
 }
 
 .work-hero-shell {
@@ -169,6 +165,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

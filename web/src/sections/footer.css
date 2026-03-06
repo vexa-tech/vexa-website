@@ -1,6 +1,6 @@
 .site-footer {
   padding: clamp(1rem, 3vw, 1.4rem) clamp(0.7rem, 2vw, 1.1rem) clamp(1.6rem, 3.5vw, 2rem);
-  background: #160022;
+  background: #200559;
 }
 
 .site-footer-inner {
@@ -8,7 +8,7 @@
   margin: 0 auto;
   border-radius: 0.35rem;
   padding: clamp(1rem, 2.8vw, 1.6rem) clamp(1rem, 2.8vw, 1.7rem) clamp(1.4rem, 3.5vw, 2rem);
-  background: linear-gradient(180deg, #1792ea 0%, #173a7f 40%, #1b1f69 100%);
+  background: #200559;
 }
 
 .site-footer-brand {
@@ -64,7 +64,7 @@
   padding: 0;
 }
 
-.site-footer-links li + li {
+.site-footer-links li+li {
   margin-top: 0.55rem;
 }
 
@@ -138,6 +138,7 @@
 }
 
 @media (max-width: 40em) {
+
   .site-footer-tags,
   .site-footer-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
