@@ -5,7 +5,7 @@ export const siteContent = {
     logoAlt: "vexa tech logo",
     links: [
       { label: "Services", href: "/#services" },
-      { label: "Work", href: "/work" },
+      // { label: "Work", href: "/work" },
       { label: "Testimonials", href: "/#testimonials" },
     ],
     separator: "---",
