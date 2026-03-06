@@ -396,14 +396,7 @@
   }
 
   .hero-image {
-    display: block;
-    left: 50%;
-    top: 56%;
-    right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%);
-    width: clamp(16rem, 76vw, 28rem);
-    max-height: 72dvh;
+    display: none;
   }
 
   .hero-icon {
