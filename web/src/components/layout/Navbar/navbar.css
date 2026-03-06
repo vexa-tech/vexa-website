@@ -36,7 +36,7 @@
   border-radius: 999rem;
 }
 
-.hero-nav-toggle span + span {
+.hero-nav-toggle span+span {
   margin-top: 0.28rem;
 }
 
@@ -85,11 +85,15 @@
 @media (max-width: 48em) {
   .hero-nav {
     flex-wrap: wrap;
+    align-items: center;
+    column-gap: 0.5rem;
     row-gap: 0.75rem;
   }
 
   .hero-nav-toggle {
     display: block;
+    order: 4;
+    margin-inline-start: 0;
   }
 
   .hero-nav-separator {
@@ -97,11 +101,13 @@
   }
 
   .hero-nav-talk {
+    order: 3;
     margin-inline-start: auto;
+    margin-inline-end: 0.35rem;
   }
 
   .hero-nav-links {
-    order: 3;
+    order: 5;
     width: 100%;
     margin-inline-start: 0;
     padding: 0.8rem;

@@ -123,6 +123,42 @@
   }
 }
 
+@keyframes heroIconTopFloatMobile {
+
+  0%,
+  100% {
+    transform: translate(42%, -215%) rotate(-8deg);
+  }
+
+  50% {
+    transform: translate(56%, -236%) rotate(-2deg);
+  }
+}
+
+@keyframes heroIconLeftFloatMobile {
+
+  0%,
+  100% {
+    transform: translate(-205%, -18%) rotate(-14deg);
+  }
+
+  50% {
+    transform: translate(-225%, -36%) rotate(-8deg);
+  }
+}
+
+@keyframes heroIconBottomFloatMobile {
+
+  0%,
+  100% {
+    transform: translate(70%, 96%) rotate(7deg);
+  }
+
+  50% {
+    transform: translate(88%, 76%) rotate(12deg);
+  }
+}
+
 .hero-shell::before {
   content: none;
 }
@@ -360,7 +396,14 @@
   }
 
   .hero-image {
-    display: none;
+    display: block;
+    left: 50%;
+    top: 56%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: clamp(16rem, 76vw, 28rem);
+    max-height: 72dvh;
   }
 
   .hero-icon {
