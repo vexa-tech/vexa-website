@@ -1,6 +1,7 @@
 import React from "react";
 import "./hero.css";
 import Navbar from "../../components/layout/Navbar/Navbar";
+import heroImage from "../../assets/images/hero-img.webp";
 
 const Hero = () => {
   return (
@@ -33,6 +34,8 @@ const Hero = () => {
             </p>
           </div>
         </div>
+
+        <img className="hero-image" src={heroImage} alt="" aria-hidden="true" />
       </div>
     </section>
   );
