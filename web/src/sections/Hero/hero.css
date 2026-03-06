@@ -29,6 +29,75 @@
   pointer-events: none;
 }
 
+.hero-icon {
+  position: absolute;
+  width: clamp(5.2rem, 9.8vw, 8.8rem);
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 0.7rem 1.3rem rgba(6, 1, 22, 0.38));
+}
+
+.hero-icon-top {
+  right: clamp(9rem, 19vw, 14rem);
+  bottom: clamp(17rem, 40vh, 24rem);
+  opacity: 0.92;
+  transform: rotate(-8deg);
+  animation: heroIconTopFloat 6.1s ease-in-out infinite;
+}
+
+.hero-icon-left {
+  right: clamp(21rem, 44vw, 33rem);
+  bottom: clamp(8rem, 22vh, 14rem);
+  opacity: 0.68;
+  transform: rotate(-14deg);
+  animation: heroIconLeftFloat 6.8s ease-in-out infinite;
+}
+
+.hero-icon-bottom {
+  right: clamp(1rem, 1vw, 2rem);
+  bottom: clamp(2.2rem, 7vh, 4.8rem);
+  opacity: 0.84;
+  transform: rotate(7deg);
+  animation: heroIconBottomFloat 5.3s ease-in-out infinite;
+}
+
+@keyframes heroIconTopFloat {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translate(5%, -12%) rotate(-3deg);
+  }
+}
+
+@keyframes heroIconLeftFloat {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-14deg);
+  }
+
+  50% {
+    transform: translate(-8%, -9%) rotate(-9deg);
+  }
+}
+
+@keyframes heroIconBottomFloat {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
+
+  50% {
+    transform: translate(7%, -7%) rotate(10deg);
+  }
+}
+
 .hero-shell::before {
   content: none;
 }
@@ -271,6 +340,25 @@
     width: clamp(13rem, 62vw, 22rem);
     max-height: 62dvh;
   }
+
+  .hero-icon {
+    width: clamp(4.2rem, 17vw, 6.8rem);
+  }
+
+  .hero-icon-top {
+    right: clamp(4.2rem, 16vw, 7rem);
+    bottom: clamp(13.2rem, 33vh, 16rem);
+  }
+
+  .hero-icon-left {
+    right: clamp(13.2rem, 44vw, 18rem);
+    bottom: clamp(7.2rem, 20vh, 10rem);
+  }
+
+  .hero-icon-bottom {
+    right: clamp(3.2rem, 12vw, 5.8rem);
+    bottom: clamp(2.2rem, 8vh, 3.6rem);
+  }
 }
 
 @media (max-height: 52rem) and (min-width: 48.01em) {
@@ -292,5 +380,24 @@
     bottom: 0.55rem;
     width: clamp(16rem, 34vw, 30rem);
     max-height: 76dvh;
+  }
+
+  .hero-icon {
+    width: clamp(4.8rem, 9vw, 7rem);
+  }
+
+  .hero-icon-top {
+    right: clamp(6.8rem, 18vw, 11rem);
+    bottom: clamp(11.5rem, 31vh, 15rem);
+  }
+
+  .hero-icon-left {
+    right: clamp(16rem, 39vw, 24rem);
+    bottom: clamp(5.8rem, 17vh, 9rem);
+  }
+
+  .hero-icon-bottom {
+    right: clamp(5.5rem, 16vw, 9.5rem);
+    bottom: clamp(1.8rem, 6vh, 3.1rem);
   }
 }

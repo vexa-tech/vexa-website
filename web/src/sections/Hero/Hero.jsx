@@ -2,6 +2,9 @@ import React from "react";
 import "./hero.css";
 import Navbar from "../../components/layout/Navbar/Navbar";
 import heroImage from "../../assets/images/hero-img.webp";
+import programmerIcon from "../../assets/images/programmer-icon.png";
+import mobileAppIcon from "../../assets/images/mobile-app.png";
+import contactIcon from "../../assets/images/contract-icon.png";
 
 const Hero = () => {
   return (
@@ -34,6 +37,10 @@ const Hero = () => {
             </p>
           </div>
         </div>
+
+        <img className="hero-icon hero-icon-top" src={programmerIcon} alt="" aria-hidden="true" />
+        <img className="hero-icon hero-icon-left" src={mobileAppIcon} alt="" aria-hidden="true" />
+        <img className="hero-icon hero-icon-bottom" src={contactIcon} alt="" aria-hidden="true" />
 
         <img className="hero-image" src={heroImage} alt="" aria-hidden="true" />
       </div>
