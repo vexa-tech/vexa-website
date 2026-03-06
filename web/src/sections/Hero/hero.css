@@ -40,8 +40,8 @@
 }
 
 .hero-icon-top {
-  right: clamp(1rem, 1vw, 1rem);
-  bottom: clamp(19rem, 45vh, 27rem);
+  right: clamp(0rem, 0.2vw, 0.6rem);
+  bottom: clamp(20rem, 48vh, 29rem);
   opacity: 0.92;
   transform: rotate(-8deg);
   animation: heroIconTopFloat 8.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
@@ -49,15 +49,15 @@
 
 .hero-icon-left {
   right: clamp(25rem, 52vw, 40rem);
-  bottom: clamp(8rem, 22vh, 14rem);
+  bottom: clamp(6rem, 17vh, 12rem);
   opacity: 0.68;
   transform: rotate(-14deg);
   animation: heroIconLeftFloat 9.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 .hero-icon-bottom {
-  right: clamp(1rem, 1vw, 2rem);
-  bottom: clamp(2.2rem, 7vh, 4.8rem);
+  right: clamp(0rem, 0.2vw, 1rem);
+  bottom: clamp(0rem, 1vh, 2.8rem);
   opacity: 0.84;
   transform: rotate(7deg);
   animation: heroIconBottomFloat 7.9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
@@ -371,18 +371,18 @@
   }
 
   .hero-icon-top {
-    right: clamp(0.8rem, 4vw, 2.2rem);
-    bottom: clamp(14.5rem, 37vh, 18rem);
+    right: clamp(0rem, 1vw, 1rem);
+    bottom: clamp(116rem, 42vh, 22.5rem);
   }
 
   .hero-icon-left {
     right: clamp(15.8rem, 54vw, 22rem);
-    bottom: clamp(7.2rem, 20vh, 10rem);
+    bottom: clamp(5.2rem, 14vh, 8.2rem);
   }
 
   .hero-icon-bottom {
-    right: clamp(3.2rem, 12vw, 5.8rem);
-    bottom: clamp(2.2rem, 8vh, 3.6rem);
+    right: clamp(1rem, 4vw, 3.2rem);
+    bottom: clamp(0rem, 0.5vh, 1.8rem);
   }
 }
 
@@ -412,17 +412,17 @@
   }
 
   .hero-icon-top {
-    right: clamp(1.6rem, 6vw, 3.8rem);
-    bottom: clamp(12.8rem, 36vh, 16.8rem);
+    right: clamp(0.6rem, 2.4vw, 2.4rem);
+    bottom: clamp(12.4rem, 35vh, 17.2rem);
   }
 
   .hero-icon-left {
     right: clamp(19rem, 46vw, 28rem);
-    bottom: clamp(5.8rem, 17vh, 9rem);
+    bottom: clamp(3.8rem, 11vh, 7rem);
   }
 
   .hero-icon-bottom {
-    right: clamp(5.5rem, 16vw, 9.5rem);
-    bottom: clamp(1.8rem, 6vh, 3.1rem);
+    right: clamp(2.2rem, 8vw, 5.2rem);
+    bottom: clamp(0rem, 0.3vh, 1.2rem);
   }
 }
