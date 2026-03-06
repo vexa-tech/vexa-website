@@ -38,9 +38,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <img className="hero-icon hero-icon-top" src={programmerIcon} alt="" aria-hidden="true" />
+        <img className="hero-icon hero-icon-top" src={contactIcon} alt="" aria-hidden="true" />
         <img className="hero-icon hero-icon-left" src={mobileAppIcon} alt="" aria-hidden="true" />
-        <img className="hero-icon hero-icon-bottom" src={contactIcon} alt="" aria-hidden="true" />
+        <img className="hero-icon hero-icon-bottom" src={programmerIcon} alt="" aria-hidden="true" />
 
         <img className="hero-image" src={heroImage} alt="" aria-hidden="true" />
       </div>

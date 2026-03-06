@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "./contact.css";
 import { siteContent } from "../config/siteContent";
+import contactImage from "../assets/images/contact-image.webp";
 
 const FORMSPREE_FORM_KEY = (process.env.REACT_APP_FORMSPREE_ENDPOINT || "").trim();
 
@@ -50,7 +51,7 @@ const Contact = () => {
             {siteContent.contact.copyLines.map((line) => (
               <p key={line}>{line}</p>
             ))}
-            <span className="contact-shape" aria-hidden="true" />
+            <img className="contact-image" src={contactImage} alt="" aria-hidden="true" />
           </div>
 
           <form ref={formRef} className="contact-form" onSubmit={onSubmit}>

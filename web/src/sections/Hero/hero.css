@@ -21,7 +21,7 @@
 
 .hero-image {
   position: absolute;
-  right: clamp(0.4rem, 1.8vw, 1.2rem);
+  right: clamp(1.2rem, 3vw, 2.4rem);
   bottom: clamp(0.7rem, 1.8vh, 1.4rem);
   width: clamp(20rem, 44vw, 40rem);
   max-height: 100dvh;
@@ -35,23 +35,24 @@
   height: auto;
   z-index: 3;
   pointer-events: none;
+  will-change: transform;
   filter: drop-shadow(0 0.7rem 1.3rem rgba(6, 1, 22, 0.38));
 }
 
 .hero-icon-top {
-  right: clamp(9rem, 19vw, 14rem);
-  bottom: clamp(17rem, 40vh, 24rem);
+  right: clamp(1rem, 1vw, 1rem);
+  bottom: clamp(19rem, 45vh, 27rem);
   opacity: 0.92;
   transform: rotate(-8deg);
-  animation: heroIconTopFloat 6.1s ease-in-out infinite;
+  animation: heroIconTopFloat 8.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 .hero-icon-left {
-  right: clamp(21rem, 44vw, 33rem);
+  right: clamp(25rem, 52vw, 40rem);
   bottom: clamp(8rem, 22vh, 14rem);
   opacity: 0.68;
   transform: rotate(-14deg);
-  animation: heroIconLeftFloat 6.8s ease-in-out infinite;
+  animation: heroIconLeftFloat 9.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 .hero-icon-bottom {
@@ -59,7 +60,7 @@
   bottom: clamp(2.2rem, 7vh, 4.8rem);
   opacity: 0.84;
   transform: rotate(7deg);
-  animation: heroIconBottomFloat 5.3s ease-in-out infinite;
+  animation: heroIconBottomFloat 7.9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 @keyframes heroIconTopFloat {
@@ -69,8 +70,16 @@
     transform: translate(0, 0) rotate(-8deg);
   }
 
+  25% {
+    transform: translate(10%, -14%) rotate(-2deg);
+  }
+
   50% {
-    transform: translate(5%, -12%) rotate(-3deg);
+    transform: translate(16%, -24%) rotate(2deg);
+  }
+
+  75% {
+    transform: translate(6%, -12%) rotate(-4deg);
   }
 }
 
@@ -81,8 +90,16 @@
     transform: translate(0, 0) rotate(-14deg);
   }
 
+  25% {
+    transform: translate(-12%, -10%) rotate(-10deg);
+  }
+
   50% {
-    transform: translate(-8%, -9%) rotate(-9deg);
+    transform: translate(-20%, -18%) rotate(-4deg);
+  }
+
+  75% {
+    transform: translate(-10%, -8%) rotate(-12deg);
   }
 }
 
@@ -93,8 +110,16 @@
     transform: translate(0, 0) rotate(7deg);
   }
 
+  25% {
+    transform: translate(10%, -8%) rotate(10deg);
+  }
+
   50% {
-    transform: translate(7%, -7%) rotate(10deg);
+    transform: translate(18%, -16%) rotate(14deg);
+  }
+
+  75% {
+    transform: translate(8%, -6%) rotate(9deg);
   }
 }
 
@@ -335,7 +360,7 @@
   }
 
   .hero-image {
-    right: 0.4rem;
+    right: 1rem;
     bottom: 1.2rem;
     width: clamp(13rem, 62vw, 22rem);
     max-height: 62dvh;
@@ -346,12 +371,12 @@
   }
 
   .hero-icon-top {
-    right: clamp(4.2rem, 16vw, 7rem);
-    bottom: clamp(13.2rem, 33vh, 16rem);
+    right: clamp(0.8rem, 4vw, 2.2rem);
+    bottom: clamp(14.5rem, 37vh, 18rem);
   }
 
   .hero-icon-left {
-    right: clamp(13.2rem, 44vw, 18rem);
+    right: clamp(15.8rem, 54vw, 22rem);
     bottom: clamp(7.2rem, 20vh, 10rem);
   }
 
@@ -387,12 +412,12 @@
   }
 
   .hero-icon-top {
-    right: clamp(6.8rem, 18vw, 11rem);
-    bottom: clamp(11.5rem, 31vh, 15rem);
+    right: clamp(1.6rem, 6vw, 3.8rem);
+    bottom: clamp(12.8rem, 36vh, 16.8rem);
   }
 
   .hero-icon-left {
-    right: clamp(16rem, 39vw, 24rem);
+    right: clamp(19rem, 46vw, 28rem);
     bottom: clamp(5.8rem, 17vh, 9rem);
   }
 
